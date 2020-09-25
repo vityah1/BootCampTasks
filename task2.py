@@ -7,7 +7,6 @@ def timeit(method):
         ts = time.time()
         result = method(*args, **kw)
         te = time.time()
-#        NameOfMethod=method.__name__
         print (f'''decorate function result: method name: {method.__name__}, args: {args}, te-ts: {te-ts}''')
         return result
 
