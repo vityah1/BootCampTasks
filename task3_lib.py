@@ -45,12 +45,12 @@ def DoMenu():
             rate=input('Input rate [0,1]: ')
 
             try:
-                rate=int(rate)
+                rate=float(rate)
             except:
                 print ('Wrong input!\n')
                 exit()     
-            if rate not in [1,0]:
-                print ('Wrong input! rate must be only 1 or 0\n')
+            if rate >1 or rate <0:
+                print ('Wrong input! rate must be only 0-1\n')
                 myexit()     
 
             c.execute(f'''INSERT INTO authors VALUES ('{author}','{note}',{rate}) ''')
