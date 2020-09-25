@@ -1,5 +1,5 @@
 # BootCampTasks
-BottCamp tasks
+BootCamp tasks
 
 task: 
 There is string s = "string". Write the code that reverses string, i.e. returns "gnirts"
