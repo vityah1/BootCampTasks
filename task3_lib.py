@@ -42,7 +42,7 @@ def DoMenu():
         elif v==2:
             author=input('Input author: ')
             note=input('Input note: ')
-            rate=input('Input rate [0,1]: ')
+            rate=input('Input rate [0-1]: ')
 
             try:
                 rate=float(rate)
