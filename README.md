@@ -30,7 +30,6 @@ Get average rating among all authors
 
 Result:
 
- - task3_setup.py - set up and create database
  - task3_lib.py - work with notes
 
 P.S.
