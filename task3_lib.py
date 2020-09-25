@@ -7,7 +7,7 @@ c = conn.cursor()
 
 def DoMenu():
     def Menu():
-        print ("Input:\n1 - list authors\n2 - create note\n3 - print notes\n4- Get author with the highest rating\n5 - Get author with the lowest rating\n6 - Get average rating among all authors\n0 - Exit")
+        print (f'''Input:\n1 - list authors\n2 - create note\n3 - print notes\n4- Get author with the highest rating\n5 - Get author with the lowest rating\n6 - Get average rating among all authors\n0 - Exit''')
 
     loop=True
     while loop:
@@ -28,12 +28,15 @@ def DoMenu():
         elif v==2:
             author=input('input author: ')
             note=input('input note: ')
-            rate=input('input rate: ')
+            rate=input('input rate [0,1]: ')
 
             try:
                 rate=int(rate)
             except:
                 print ('wrong input!\n')
+                exit()     
+            if rate not in [1,0]:
+                print ('wrong input! rate must be only 1 or 0\n')
                 exit()     
 
             c.execute(f'''INSERT INTO authors VALUES ('{author}','{note}',{rate}) ''')
